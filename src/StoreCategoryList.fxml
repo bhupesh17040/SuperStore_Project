@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backbutton" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StoreCategoryListController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="125.0" fitWidth="379.0" layoutX="232.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/SuperStore.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="Categorylist" layoutX="366.0" layoutY="226.0" prefHeight="198.0" prefWidth="340.0" />
+      <Button fx:id="AddCategoryButton" layoutX="62.0" layoutY="272.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="212.0" text="Add Category">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="DeleteCataegoryButton" layoutX="62.0" layoutY="334.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="212.0" text="Delete Category ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="UpdateCategoryName" layoutX="62.0" layoutY="398.0" mnemonicParsing="false" text="Update Category Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="SortCategoryListButton" layoutX="366.0" layoutY="438.0" mnemonicParsing="false" text="Alphabatically Sort and View Categories">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="62.0" layoutY="516.0" mnemonicParsing="false" text="Back">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="BrowseCategoryButton" layoutX="62.0" layoutY="206.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="212.0" text="Browse Category">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="366.0" layoutY="192.0" prefHeight="18.0" prefWidth="73.0" text="Search:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="SearchCategoryBox" layoutX="440.0" layoutY="193.0" prefHeight="26.0" prefWidth="265.0" promptText="Search any Category" />
+   </children>
+</AnchorPane>

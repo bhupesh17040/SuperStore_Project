@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="750.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="application.StoreSubCategoryListController">
+   <children>
+      <Button fx:id="BrowseSubcategory" layoutX="66.0" layoutY="200.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="194.0" text="Browse Subcategory">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="AddSubcategory" layoutX="63.0" layoutY="260.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="194.0" text="Add Subcategory">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="DeleteSubcategory" layoutX="63.0" layoutY="323.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="193.0" text="Delete Subcategory">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="UpdateSubcategory" layoutX="63.0" layoutY="388.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="194.0" text="Update Subcategory ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="backbutton" layoutX="63.0" layoutY="509.0" mnemonicParsing="false" text="Back">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="SortSubcategoryList" layoutX="382.0" layoutY="427.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="264.0" text="Sort Subcategory List">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="354.0" layoutY="157.0" text="Search:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="SubcategoryList" layoutX="369.0" layoutY="208.0" prefHeight="200.0" prefWidth="290.0" />
+      <TextField fx:id="SearchSubcategoryBox" layoutX="419.0" layoutY="151.0" prefHeight="39.0" prefWidth="239.0" promptText="Search for a Subcategory">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="MainImage" fitHeight="111.0" fitWidth="350.0" layoutX="260.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/SuperStore.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="CurrentLocationLabel" layoutX="68.0" layoutY="148.0" prefHeight="18.0" prefWidth="110.0" text="Store&gt;Category" />
+   </children>
+</AnchorPane>

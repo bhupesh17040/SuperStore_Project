@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OpeningPageController">
+   <children>
+      <RadioButton fx:id="checkusertype1" layoutX="36.0" layoutY="240.0" mnemonicParsing="false" text="SuperUser">
+         <toggleGroup>
+            <ToggleGroup fx:id="Type_of_User_Group" />
+         </toggleGroup>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="checkusertype2" layoutX="34.0" layoutY="286.0" mnemonicParsing="false" text="Warehouse Administartor" toggleGroup="$Type_of_User_Group">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="checkusertype3" layoutX="34.0" layoutY="333.0" mnemonicParsing="false" text="Store Administartor" toggleGroup="$Type_of_User_Group">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="checkusertype4" layoutX="34.0" layoutY="385.0" mnemonicParsing="false" text="Guest User" toggleGroup="$Type_of_User_Group">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="29.0" layoutY="194.0" text="Please Select Your Login Type:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="exitbutton" layoutX="419.0" layoutY="496.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="Exit">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="nextbutton" layoutX="547.0" layoutY="496.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="Next">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="MainImage" fitHeight="108.0" fitWidth="525.0" layoutX="234.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+            <Image url="@img/SuperStore.png" />
+      </image>
+      </ImageView>
+      <Label layoutX="84.0" layoutY="424.0" />
+      <Label layoutX="43.0" layoutY="462.0" prefHeight="18.0" prefWidth="416.0" text="//checkusertype">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="29.0" layoutY="167.0" text="Welcome to SuperStore!!!Get the best products at the most affordable prices here :-)">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
