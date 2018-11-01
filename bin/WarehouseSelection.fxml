@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -24,6 +25,26 @@
             <Image url="@../../../../Desktop/WhatsApp%20Image%202018-10-28%20at%2014.41.45.jpeg" />
          </image>
       </ImageView>
-      <ListView layoutX="33.0" layoutY="108.0" prefHeight="49.0" prefWidth="200.0" />
+      <ListView layoutX="30.0" layoutY="168.0" prefHeight="49.0" prefWidth="200.0" />
+      <Label layoutX="36.0" layoutY="119.0" text="Please select the Warehouse">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="248.0" text="Warehouse 1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="300.0" text="Warehouse 2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="350.0" text="Warehouse 3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
