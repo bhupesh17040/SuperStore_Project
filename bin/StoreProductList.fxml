@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="750.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="application.StoreProductListController">
+<AnchorPane prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StoreProductListController">
    <children>
       <TreeTableView fx:id="ProductTable" layoutX="41.0" layoutY="212.0" prefHeight="274.0" prefWidth="451.0">
         <columns>
@@ -37,15 +36,31 @@
       <Label fx:id="CurrentLocation" layoutX="41.0" layoutY="141.0" text="Store&gt;Category&gt;Subcategory&gt;Product" />
       <Label layoutX="43.0" layoutY="173.0" text="Search:">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
          </font>
       </Label>
       <TextField fx:id="SearchProduct" layoutX="102.0" layoutY="167.0" promptText="Search for a Product">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
          </font>
       </TextField>
       <Button fx:id="SortProductLlist" layoutX="533.0" layoutY="260.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" text="Sort Product List">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="533.0" layoutY="316.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" text="Add Product">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="533.0" layoutY="372.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" text="Update Product">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="285.0" layoutY="170.0" mnemonicParsing="false" text="Search" />
+      <Button layoutX="533.0" layoutY="425.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" text="Delete Button">
          <font>
             <Font size="18.0" />
          </font>

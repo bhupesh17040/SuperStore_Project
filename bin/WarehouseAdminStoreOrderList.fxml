@@ -11,13 +11,14 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="750.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1">
    <children>
-      <TableView layoutX="107.0" layoutY="167.0" prefHeight="200.0" prefWidth="578.0">
+      <TableView layoutX="14.0" layoutY="160.0" prefHeight="200.0" prefWidth="732.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Store Name" />
           <TableColumn prefWidth="97.60005187988281" text="Product Name" />
             <TableColumn prefWidth="126.39997863769531" text="Quantity Needed" />
             <TableColumn prefWidth="127.20001220703125" text="Quantity Available" />
             <TableColumn prefWidth="166.4000244140625" text="Expected Arrival Date" />
+            <TableColumn prefWidth="114.40008544921875" text="Product Code" />
         </columns>
       </TableView>
       <ImageView fitHeight="107.0" fitWidth="265.0" layoutX="245.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">

@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="750.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="application.StoreSubCategoryListController">
+<AnchorPane prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StoreSubCategoryListController">
    <children>
       <Button fx:id="BrowseSubcategory" layoutX="66.0" layoutY="200.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="194.0" text="Browse Subcategory">
          <font>
@@ -42,22 +41,15 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Label layoutX="354.0" layoutY="157.0" text="Search:">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
+      <Label layoutX="356.0" layoutY="168.0" text="Search:" />
       <ListView fx:id="SubcategoryList" layoutX="369.0" layoutY="208.0" prefHeight="200.0" prefWidth="290.0" />
-      <TextField fx:id="SearchSubcategoryBox" layoutX="419.0" layoutY="151.0" prefHeight="39.0" prefWidth="239.0" promptText="Search for a Subcategory">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
+      <TextField fx:id="SearchSubcategoryBox" layoutX="406.0" layoutY="163.0" prefHeight="26.0" prefWidth="239.0" promptText="Search for a Subcategory" />
       <ImageView fx:id="MainImage" fitHeight="111.0" fitWidth="350.0" layoutX="260.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/SuperStore.png" />
          </image>
       </ImageView>
       <Label fx:id="CurrentLocationLabel" layoutX="68.0" layoutY="148.0" prefHeight="18.0" prefWidth="110.0" text="Store&gt;Category" />
+      <Button layoutX="659.0" layoutY="163.0" mnemonicParsing="false" text="Search" />
    </children>
 </AnchorPane>

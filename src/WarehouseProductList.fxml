@@ -10,13 +10,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="750.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1">
+<AnchorPane prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TableView layoutX="35.0" layoutY="259.0" prefHeight="200.0" prefWidth="314.0">
+      <TableView layoutX="35.0" layoutY="259.0" prefHeight="219.0" prefWidth="390.0">
         <columns>
           <TableColumn prefWidth="157.59999084472656" text="Product Name" />
           <TableColumn prefWidth="156.800048828125" text="Quantity Available" />
+            <TableColumn prefWidth="75.0" text="Price" />
         </columns>
       </TableView>
       <ImageView fitHeight="170.0" fitWidth="245.0" layoutX="257.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -29,12 +29,12 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="513.0" layoutY="230.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="198.0" text="Add Product">
+      <Button layoutX="513.0" layoutY="239.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="198.0" text="Add Product">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="512.0" layoutY="288.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="198.0" text="Delete Product ">
+      <Button layoutX="512.0" layoutY="300.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="198.0" text="Delete Product ">
          <font>
             <Font size="18.0" />
          </font>
@@ -49,7 +49,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="57.0" layoutY="493.0" mnemonicParsing="false" text="Back">
+      <Button layoutX="35.0" layoutY="523.0" mnemonicParsing="false" text="Back">
          <font>
             <Font size="18.0" />
          </font>
