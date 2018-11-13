@@ -8,13 +8,7 @@ import java.util.*;import java.lang.*;import java.awt.*;
 public abstract class Admin {
 	
 	
-	public Product search_product(String Product_Name) {
-		//
-		return null;
-	}
-	public void partial_search(String Partial_String) {
-		
-	}
+	
 	public abstract void add_new_product(String Product_name,double price);
 	public abstract void update_product_info(String Product_name,double price,double D,double H,int K);
 	public abstract void delete_product(String Product_name);

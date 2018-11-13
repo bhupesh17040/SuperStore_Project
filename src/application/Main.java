@@ -6,15 +6,27 @@ import javafx.stage.*;
 import javafx.scene.*;
 import java.util.*;import java.lang.*;import java.awt.*;
 public class Main extends Application{
-	@Override
+	
+	private Database dbt=new Database();
 	public void start(Stage primaryStage) {//Opens the Opening Page of our Document
 		try {
-			Parent root=FXMLLoader.load(getClass().getResource("/CreateSubCategory.fxml"));
+			FXMLLoader loader =new FXMLLoader();
+			loader.setLocation(getClass().getResource("/OpeningPage.fxml"));
+			Parent root=loader.load();
+			OpeningPageController controller=loader.getController();
+			controller.receive(this.dbt);
+			Scene scene=new Scene(root);
+			primaryStage.setScene(scene);
+			primaryStage.setTitle("Welcome to SuperStore!!!");
+			primaryStage.show();
+			/*
+			Parent root=FXMLLoader.load(getClass().getResource("/OpeningPage.fxml"));
 			Scene scene=new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Welcome to SuperStore!!!");
 			//primaryStage.setMaximized(true);
 			primaryStage.show();
+			*/
 		}
 		catch(Exception e){
 			e.printStackTrace();

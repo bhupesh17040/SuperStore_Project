@@ -1,6 +1,7 @@
 package application;
 import javafx.application.Application;import javafx.fxml.FXMLLoader;import javafx.*;import javafx.stage.*;import javafx.scene.*;
 import java.util.*;import java.lang.*;import java.awt.*;
+
 public final class EndUser {
 	private final String EndUser_Name;
 	private final String EndUser_ID;

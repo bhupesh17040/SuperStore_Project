@@ -11,5 +11,13 @@ public class Database {
 	private ArrayList<Warehouse> StoresList;
 	private HashMap<String,WarehouseAdmin> WarehouseAdminMap;
 	private HashMap<String,StoreAdmin> StoreAdminMap;
+	private HashMap<String,String> LinkStoreWarehouse;
 	private ArrayList<EndUser> EndUserMap;
+	public void generateSuperUser() {
+		String id="Superuser101";
+		String password="#123@rt3ap10";
+		superuser=new SuperUser(this,id,password);
+	}
+	
+	
 }

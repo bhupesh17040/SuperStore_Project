@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OpeningPageController">
    <children>
-      <RadioButton fx:id="checkusertype1" layoutX="36.0" layoutY="240.0" mnemonicParsing="false" text="SuperUser">
+      <RadioButton fx:id="checkusertype1" layoutX="36.0" layoutY="240.0" mnemonicParsing="false" onAction="#selectusertype" text="SuperUser">
          <toggleGroup>
             <ToggleGroup fx:id="Type_of_User_Group" />
          </toggleGroup>
@@ -19,17 +19,17 @@
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="checkusertype2" layoutX="34.0" layoutY="286.0" mnemonicParsing="false" text="Warehouse Administartor" toggleGroup="$Type_of_User_Group">
+      <RadioButton fx:id="checkusertype2" layoutX="34.0" layoutY="286.0" mnemonicParsing="false" onAction="#selectusertype" text="Warehouse Administrator" toggleGroup="$Type_of_User_Group">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="checkusertype3" layoutX="34.0" layoutY="333.0" mnemonicParsing="false" text="Store Administartor" toggleGroup="$Type_of_User_Group">
+      <RadioButton fx:id="checkusertype3" layoutX="34.0" layoutY="333.0" mnemonicParsing="false" onAction="#selectusertype" text="Store Administrator" toggleGroup="$Type_of_User_Group">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="checkusertype4" layoutX="34.0" layoutY="385.0" mnemonicParsing="false" text="Guest User" toggleGroup="$Type_of_User_Group">
+      <RadioButton fx:id="checkusertype4" layoutX="34.0" layoutY="385.0" mnemonicParsing="false" onAction="#selectusertype" text="Guest User" toggleGroup="$Type_of_User_Group">
          <font>
             <Font size="18.0" />
          </font>
@@ -44,7 +44,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="nextbutton" layoutX="547.0" layoutY="496.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="Next">
+      <Button fx:id="nextbutton" layoutX="547.0" layoutY="496.0" mnemonicParsing="false" onAction="#next" prefHeight="40.0" prefWidth="80.0" text="Next">
          <font>
             <Font size="18.0" />
          </font>
@@ -55,7 +55,7 @@
       </image>
       </ImageView>
       <Label layoutX="84.0" layoutY="424.0" />
-      <Label layoutX="43.0" layoutY="462.0" prefHeight="18.0" prefWidth="416.0" text="//checkusertype">
+      <Label fx:id="checktype" layoutX="43.0" layoutY="462.0" prefHeight="18.0" prefWidth="416.0" text="//checkusertype">
          <font>
             <Font size="18.0" />
          </font></Label>
