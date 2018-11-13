@@ -4,7 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.*;
 import javafx.stage.*;
 import javafx.scene.*;
-
+import java.util.*;import java.lang.*;import java.awt.*;
 public class Main extends Application{
 	@Override
 	public void start(Stage primaryStage) {//Opens the Opening Page of our Document
