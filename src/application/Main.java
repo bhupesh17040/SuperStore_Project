@@ -19,14 +19,6 @@ public class Main extends Application{
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Welcome to SuperStore!!!");
 			primaryStage.show();
-			/*
-			Parent root=FXMLLoader.load(getClass().getResource("/OpeningPage.fxml"));
-			Scene scene=new Scene(root);
-			primaryStage.setScene(scene);
-			primaryStage.setTitle("Welcome to SuperStore!!!");
-			//primaryStage.setMaximized(true);
-			primaryStage.show();
-			*/
 		}
 		catch(Exception e){
 			e.printStackTrace();

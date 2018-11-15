@@ -6,8 +6,8 @@ import java.util.HashMap;
 public class SuperUser {
 	
 	private final Database dbt;
-	private String superuserID;
-	private String password;
+	private final String superuserID;
+	private final String password;
 	/**
 	 * @param dbt
 	 * @param superuserID
@@ -33,6 +33,24 @@ public class SuperUser {
 	}
 	public void LinkStoreWarehouse(String Store_Name,String Warehouse_name) {
 		
+	}
+	/**
+	 * @return the dbt
+	 */
+	public Database getDbt() {
+		return dbt;
+	}
+	/**
+	 * @return the superuserID
+	 */
+	public String getSuperuserID() {
+		return superuserID;
+	}
+	/**
+	 * @return the password
+	 */
+	public String getPassword() {
+		return password;
 	} 
 	
 	

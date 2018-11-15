@@ -61,7 +61,7 @@ public class OpeningPageController {
 			LoginController controller=loader.getController();
 			controller.receive(this.pass_to_next_window,this.dbt);
 			Scene scene=new Scene(root);
-			Stage window=(Stage)((Node) event.getSource()).getScene().getWindow();
+			Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
 			window.setScene(scene);
 			window.setTitle("Login");
 			window.show();
