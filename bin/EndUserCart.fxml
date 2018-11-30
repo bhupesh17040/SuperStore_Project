@@ -16,12 +16,12 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="460.0" layoutY="452.0" mnemonicParsing="false" text="Checkout">
+      <Button layoutX="569.0" layoutY="518.0" mnemonicParsing="false" text="Checkout">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Label layoutX="336.0" layoutY="161.0" prefHeight="39.0" prefWidth="49.0" text="Cart">
+      <Label layoutX="333.0" layoutY="151.0" prefHeight="39.0" prefWidth="49.0" text="Cart">
          <font>
             <Font size="24.0" />
          </font>
@@ -31,14 +31,21 @@
             <Image url="@img/SuperStore.png" />
          </image>
       </ImageView>
-      <TableView layoutX="91.0" layoutY="215.0" prefHeight="200.0" prefWidth="534.0">
+      <TableView layoutX="90.0" layoutY="190.0" prefHeight="200.0" prefWidth="534.0">
         <columns>
           <TableColumn prefWidth="162.3999786376953" text="Product Name" />
           <TableColumn prefWidth="232.00006103515625" text="Product Price" />
             <TableColumn prefWidth="140.00006103515625" text="Quantity" />
         </columns>
       </TableView>
-      <Button layoutX="91.0" layoutY="452.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="230.0" text="Delete Product from Cart">
+      <Button layoutX="220.0" layoutY="418.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="230.0" text="Delete Product from Cart">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="492.0" layoutY="161.0" prefHeight="18.0" prefWidth="88.0" text="Funds Available:" />
+      <Label fx:id="funds" layoutX="580.0" layoutY="162.0" text="#Funds" />
+      <Button fx:id="addfunds" layoutX="61.0" layoutY="418.0" mnemonicParsing="false" text="Add Funds ">
          <font>
             <Font size="18.0" />
          </font>

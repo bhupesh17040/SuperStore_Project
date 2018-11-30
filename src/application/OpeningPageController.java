@@ -27,7 +27,6 @@ public class OpeningPageController {
     public void receive(Database dbt) {
     	this.dbt=dbt;
     }
-    
     public void selectusertype(ActionEvent event){
     	/*This function checks the which RadioButton has been selected
     	 * and  

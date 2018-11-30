@@ -18,6 +18,7 @@ public class Database {
 		String password="#123@rt3ap10";
 		superuser=new SuperUser(this,id,password);
 	}
+	//Setters and Getters
 	/**
 	 * @return the superuser
 	 */
@@ -102,6 +103,7 @@ public class Database {
 	public void setEndUserMap(ArrayList<EndUser> endUserMap) {
 		EndUserMap = endUserMap;
 	}
+	//Setters and Getters end here
 	
 	
 }
