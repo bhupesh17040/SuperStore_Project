@@ -28,13 +28,15 @@ public final class EndUser {
 		this.Funds=this.Funds+New_Funds;
 	}
 	public void Add_to_Cart(String Product_Name,int Quantity) {
-		
+		this.guest_cart.Add_to_Cart(Product_Name,Quantity);
 	}
 	public void Remove_from_Cart(String Product_Name) {
+		this.guest_cart.Remove_from_Cart(Product_Name);
 		
 	}
 	public void Checkout() {
-		
+		this.guest_cart.Checkout();
 	}
 	
 }
+
