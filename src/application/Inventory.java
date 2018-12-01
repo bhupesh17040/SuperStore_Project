@@ -193,7 +193,7 @@ public class Inventory {
 		int check=0;
 		int sub_cat_index=0;
 		for(int i=0;i<CategoryList.size();i++) {
-			if(CategoryList.get(i).getCategory_Name().equals(catname)) {
+			if(CategoryList.get(i).getCategory_Name().equalsIgnoreCase(catname)) {
 				cat_index=i;
 				check=1;
 				System.out.println("Found the Category ");
@@ -208,7 +208,7 @@ public class Inventory {
 		System.out.println(CategoryList.get(cat_index).getSubcategory_List().size());
 		for(int j=0;j<CategoryList.get(cat_index).getSubcategory_List().size();j++) {
 			System.out.println("h"+CategoryList.get(cat_index).getSubcategory_List().get(j).getSubcategory_Name());
-			if(CategoryList.get(cat_index).getSubcategory_List().get(j).getSubcategory_Name().equals(Subcategory_name)) {
+			if(CategoryList.get(cat_index).getSubcategory_List().get(j).getSubcategory_Name().equalsIgnoreCase(Subcategory_name)) {
 				
 				sub_cat_index=j;
 				check=-1;
@@ -235,7 +235,7 @@ public class Inventory {
 		int y=0;
 		int ch=0;
 		for(int k=0;k<s.getProduct_List().size();k++) {
-			if(s.getProduct_List().get(k).getProd_Name().equals(Product_name)) {
+			if(s.getProduct_List().get(k).getProd_Name().equalsIgnoreCase(Product_name)) {
 				y=k;
 				ch=1;
 				break;
@@ -247,7 +247,18 @@ public class Inventory {
 		}
 		return s.getProduct_List().get(y);
 	}
-
+	public ArrayList<String> Partial_Search(String s) {//Returns all product names which match
+		//In the format "String1--String2--String3"
+		ArrayList<String> ans=new ArrayList<String>();
+		for (String name: this.ProductPathMap.keySet()){
+			String key =name.toString();
+            if(key.contains(s)) {
+            	ans.add(key);
+            	String value = this.ProductPathMap.get(name).toString();  
+                System.out.println("Product Name:"+key + " Value:" + value);  
+            }} 
+		return ans;
+	}
 
 	public void print_inventory() {
 		System.out.println("Number of Categories:"+this.CategoryList.size());

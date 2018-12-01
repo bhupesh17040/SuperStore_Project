@@ -17,7 +17,10 @@ public class Warehouse {
 		Warehouse_ID = warehouse_ID;
 		WInventory=new Inventory(this,this.Warehouse_ID,this.Warehouse_Name);
 	}
-
+	public ArrayList<String> partial_search(String s) {
+		return this.getWInventory().Partial_Search(s);
+		
+	}
 	/**
 	 * @return the wInventory
 	 */

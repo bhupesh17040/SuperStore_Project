@@ -57,11 +57,11 @@ public class Category {
 	public String delete_subcategory(String Subcategory_Name) {
 		int t=0;
 		for(int i=0;i<Subcategory_List.size();i++) {
-			if(Subcategory_List.get(i).getSubcategory_Name().equals(Subcategory_Name))
+			if(Subcategory_List.get(i).getSubcategory_Name().equals(Subcategory_Name)) {
 			t=i;
 			System.out.println("	Found the Subcategory to Delete");
 			break;
-		}
+		}}
 		String name=this.Subcategory_List.get(t).getSubcategory_Name();
 		this.Subcategory_List.remove(t);
 		System.out.println("	Removed from "+this.getCategory_Name()+"Subcategories List");

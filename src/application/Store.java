@@ -16,7 +16,10 @@ public class Store {
 		this.Store_ID = store_ID;
 		this.sInventory=new Inventory(this,this.Store_ID,this.Store_Name);
 	}
-	
+	public ArrayList<String> partial_search(String s) {
+		return this.getsInventory().Partial_Search(s);
+		
+	}
 	/**
 	 * @return the wInventory
 	 */

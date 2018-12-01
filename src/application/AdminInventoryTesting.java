@@ -19,6 +19,7 @@ public class AdminInventoryTesting {
 		wa.add_subcategory("Headphones","warehouse1>Electronics");
 		sa.add_subcategory("Headphones","store1>Electronics");
 		wa.add_new_product("Bose_Headphones","warehouse1>Electronics>Headphones", 15,25000, 15, 10, 2,"Expensive");
+		
 		sa.add_new_product("Bose_Headphones","store1>Electrosnics>Headphones", 15,25000, 15, 10, 2,"Expensive");
 		wa.add_new_product("Sony_10","warehouse1>Electronics>TV", 10, 100, 20, 10, 23, "Idiot Box");
 		sa.add_new_product("Sony_10","store1>Electronics>TV", 10, 100, 20, 10, 23, "Idiot Box");
@@ -35,8 +36,9 @@ public class AdminInventoryTesting {
 		wa.getWarehouseIncharge().getWInventory().print_inventory();
 		//sa.getStoreIncharge().getsInventory().print_inventory();
 		System.out.println("-----------------------------------------------------------");
+		//wa.getWarehouseIncharge().getWInventory().Partial_Search("n");
+		wa.delete_subcategory("Headphones");
 		
-		wa.delete_category("Electronics");
 		
 		wa.getWarehouseIncharge().getWInventory().print_inventory();
 		//sa.getStoreIncharge().getsInventory().print_inventory();
