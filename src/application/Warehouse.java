@@ -8,15 +8,16 @@ import java.util.*;import java.lang.*;import java.awt.*;
 public class Warehouse {
 	private final String Warehouse_Name;
 	private final String Warehouse_ID;
-	private final WarehouseAdmin WAdmin;
-	private Inventory WInventory;
-	private ArrayList<String> StoresLinked;
+	private WarehouseAdmin WAdmin;
 	
-	public Warehouse(String warehouse_Name, String warehouse_ID, WarehouseAdmin wAdmin) {
+
+	private Inventory WInventory;
+	private ArrayList<Store> StoresLinked=new ArrayList<Store>();
+	public Warehouse(String warehouse_Name, String warehouse_ID) {
 		super();
 		Warehouse_Name = warehouse_Name;
 		Warehouse_ID = warehouse_ID;
-		WAdmin = wAdmin;
+		WInventory=new Inventory(this,this.Warehouse_ID,this.Warehouse_Name);
 	}
 
 	/**
@@ -36,16 +37,11 @@ public class Warehouse {
 	/**
 	 * @return the storesLinked
 	 */
-	public ArrayList<String> getStoresLinked() {
+	public ArrayList<Store> getStoresLinked() {
 		return StoresLinked;
 	}
 
-	/**
-	 * @param storesLinked the storesLinked to set
-	 */
-	public void setStoresLinked(ArrayList<String> storesLinked) {
-		StoresLinked = storesLinked;
-	}
+	
 
 	/**
 	 * @return the warehouse_Name
@@ -68,7 +64,12 @@ public class Warehouse {
 		return WAdmin;
 	}
 	
-	
+	/**
+	 * @param wAdmin the wAdmin to set
+	 */
+	public void setWAdmin(WarehouseAdmin wAdmin) {
+		WAdmin = wAdmin;
+	}
 
 	
 }

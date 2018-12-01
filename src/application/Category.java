@@ -14,11 +14,16 @@ public class Category {
 		this.Category_ID=category_ID;
 		this.Category_Path = category_Path;
 		Number_of_Subcategory=0;
+		Subcategory_List=new ArrayList<Subcategory>();
 	}
 	public Subcategory Add_Subcategory(String Subcategory_Name) {
+		
 		String new_sub_ID=this.Generate_New_Subcategory_ID();
 		String new_sub_Path=this.Category_Path+">"+this.Category_Name;
+		System.out.println("	Creating Subcategory in "+new_sub_Path);
 		Subcategory new_subcategory=new Subcategory(this,Subcategory_Name,new_sub_ID,new_sub_Path);
+		this.Subcategory_List.add(new_subcategory);
+		System.out.println("	Added to "+this.Category_Name+" Subcategories Lists");
 		return new_subcategory;
 	}
 	/**returns the ID of the new Subcategory ID 
@@ -29,6 +34,18 @@ public class Category {
 		Number_of_Subcategory++;
 		return new_ID;
 	}
+	
+	public void print_details() {
+		System.out.println("Category Name:"+this.Category_Name);
+		System.out.println("Category ID:"+this.Category_ID);
+		System.out.println("Category Path"+this.Category_Path);
+		System.out.println("All Product Names inside the Subcategory");
+		for(int i=0;i<this.getSubcategory_List().size();i++) {
+			System.out.println("	"+this.getSubcategory_List().get(i).getSubcategory_Name());
+		}
+	}
+	
+	
 	//Setters and getters start here
 	/**
 	 * @return the subcategory_List
@@ -38,10 +55,12 @@ public class Category {
 		for(int i=0;i<Subcategory_List.size();i++) {
 			if(Subcategory_List.get(i).getSubcategory_Name().equals(Subcategory_Name))
 			t=i;
+			System.out.println("	Found the Subcategory to Delete");
 			break;
 		}
 		String name=this.Subcategory_List.get(t).getSubcategory_Name();
 		this.Subcategory_List.remove(t);
+		System.out.println("	Removed from "+this.getCategory_Name()+"Subcategories List");
 		return name;
 	}
 	

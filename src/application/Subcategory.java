@@ -17,12 +17,15 @@ public class Subcategory {
 		Subcategory_Name = subcategory_Name;
 		Subcategory_ID = subcategory_ID;
 		Subcategory_Path = subcategory_Path;
+		Product_List=new ArrayList<Product>();
 	}
 	
-	public Product Add_Product(String Product_Name,double price) {
+	public Product Add_Product(String Product_Name,int quantity,double price,double Fixed_Price,double Carry_Cost,int Demand,String Descp) {
+		
 		String new_prod_ID=this.Generate_New_Product_ID(this.Subcategory_Path);
 		String new_prod_Path=this.Subcategory_Path+">"+this.Subcategory_Name;
-		Product new_product=new Product(this,Product_Name,new_prod_Path,new_prod_ID,price);
+		System.out.println("		Adding the Product at "+new_prod_Path);
+		Product new_product=new Product(this,Product_Name,new_prod_Path,new_prod_ID,quantity,price, Fixed_Price, Carry_Cost,Demand,Descp);
 		this.Product_List.add(new_product);
 		return new_product;
 	}
@@ -30,13 +33,26 @@ public class Subcategory {
 		int t=0;
 		for(int i=0;i<Product_List.size();i++) {
 			if(this.Product_List.get(i).getProd_Name().equals(Product_Name)) {
+				System.out.println("		Found the Product to delete");
 				t=i;
 				break;
 		}}
 		String name=Product_List.get(t).getProd_Name();
 		this.Product_List.remove(t);
+		System.out.println("		Removed from Subcategory Products List");
 		return name;
 	}
+	
+	public void print_details() {
+		System.out.println("	SubCategory Name:"+this.Subcategory_Name);
+		System.out.println("	Subcategory ID:"+this.Subcategory_ID);
+		System.out.println("	Subcategory Path"+this.Subcategory_Path);
+		System.out.println("	All Product Names inside the Subcategory");
+		for(int i=0;i<this.getProduct_List().size();i++) {
+			System.out.println("		"+this.getProduct_List().get(i).getProd_Name());
+		}
+	}
+	
 	/**
 	 * @return the category
 	 */

@@ -8,15 +8,13 @@ import java.util.*;import java.lang.*;import java.awt.*;
 public class Store {
 	private final String Store_Name;
 	private final String Store_ID;
-	private final StoreAdmin sAdmin;
+	private StoreAdmin sAdmin;
 	private final Inventory sInventory;
 	private Warehouse LinkedWarehouse;
-	public Store(String store_Name, String store_ID, StoreAdmin wAdmin) {
-		super();
+	public Store(String store_Name, String store_ID) {
 		this.Store_Name = store_Name;
 		this.Store_ID = store_ID;
-		this.sAdmin = wAdmin;
-		this.sInventory=new Inventory(this,this.Store_Name,this.Store_ID);
+		this.sInventory=new Inventory(this,this.Store_ID,this.Store_Name);
 	}
 	
 	/**
@@ -55,6 +53,13 @@ public class Store {
 	 */
 	public StoreAdmin getsAdmin() {
 		return sAdmin;
+	}
+
+	/**
+	 * @param sAdmin the sAdmin to set
+	 */
+	public void setsAdmin(StoreAdmin sAdmin) {
+		this.sAdmin = sAdmin;
 	}
 	
 }

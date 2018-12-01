@@ -10,29 +10,51 @@ import java.util.*;import java.lang.*;import java.awt.*;
  *
  */
 public class Product {
-	private final Subcategory subcat;
+	private final Subcategory Subcat;
 	private String Prod_Name;//Name of Product
 	private final String Prod_ID;//Unique ID of Product is of the form s3-c1-b2-p1 or w3-c3-b3-p8
 	private final String Prod_Path;//Product Path is of the path Store/Warehouse_ID> Category_ID>Subcategory_ID
 	private double price;
 	private int quantity;
 	//Eg-"s11>c2>c3"
-	private double Prod_Price;//Product Price 								
+									
 	private double Fixed_Price;// Fixed_Price is fixed Price(D) per quarter 
 	private double Carry_Cost;// Carry_Cost is carry_cost(H) per quarter	
 	private int Demand;// Demand of items(K) in units per quarter.			
 	private int Count_of_Products=0;
+	private String Description;
 	
-	public Product(Subcategory subcat,String prod_Name,String path,String Product_ID,double price) {
-		this.subcat=subcat;
-		Prod_Name = prod_Name;
+	public Product(Subcategory subcat,String prod_Name,String path,String Product_ID,int quantity,double price,double Fixed_Price,double Carry_Cost,int Demand,String Descp) {
+		this.Subcat=subcat;
+		this.Prod_Name = prod_Name;
 		this.Prod_ID=Product_ID;
-		Count_of_Products++;
+		this.quantity=quantity;
+		this.Fixed_Price=Fixed_Price;
 		this.Prod_Path=path;
 		this.price=price;
-		
+		this.Carry_Cost=Carry_Cost;
+		this.Demand=Demand;
+		this.Description=Descp;
 	}
 	 /**
+	 * @return the description
+	 */
+	public String getDescription() {
+		return Description;
+	}
+	/**
+	 * @param description the description to set
+	 */
+	public void setDescription(String description) {
+		Description = description;
+	}
+	/**
+	 * @param quantity the quantity to set
+	 */
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	/**
 	 * @return the price
 	 */
 	public double getPrice() {
@@ -53,14 +75,14 @@ public class Product {
 	/**
 	 * @param quantity the quantity to set
 	 */
-	public void setQuantity(int quantity) {
+	public void ssetQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 	/**
 	 * @return the subcat
 	 */
 	public Subcategory getSubcat() {
-		return subcat;
+		return Subcat;
 	}
 	/**
 	 * returns the economic order quantity (EOQ) i.e. the 
@@ -77,16 +99,7 @@ public class Product {
 	/**
 	 * @return the prod_Price
 	 */
-	public double getProd_Price() {
-		return Prod_Price;
-	}
-	/**
-	 * @param prod_Price the prod_Price to set
-	 */
-	public void setProd_Price(double prod_Price) {
-		Prod_Price = prod_Price;
-	}
-
+	
 	/**
 	 * @return the fixed_Price
 	 */
