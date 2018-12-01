@@ -9,8 +9,6 @@ public class Warehouse {
 	private final String Warehouse_Name;
 	private final String Warehouse_ID;
 	private WarehouseAdmin WAdmin;
-	
-
 	private Inventory WInventory;
 	private ArrayList<Store> StoresLinked=new ArrayList<Store>();
 	public Warehouse(String warehouse_Name, String warehouse_ID) {

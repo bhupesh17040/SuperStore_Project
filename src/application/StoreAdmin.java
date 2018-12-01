@@ -62,7 +62,7 @@ public class StoreAdmin extends Admin{
 	@Override
 	public void add_new_product(String Product_name,String path,int quantity,double price,double D,double H,int K,String Desc) {
 		if(this.check_product_in_warehouse(Product_name)) {
-		this.getStoreIncharge().getLinkedWarehouse().getWInventory().add_new_product(Product_name, path, quantity, price, D, H, K,Desc);
+		this.getStoreIncharge().getsInventory().add_new_product(Product_name, path, quantity, price, D, H, K,Desc);
 		}
 		else {
 			System.out.println("Product Does not Exist in Linked Warehouse so cannot be added");

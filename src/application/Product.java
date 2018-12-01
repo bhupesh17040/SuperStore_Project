@@ -95,6 +95,18 @@ public class Product {
 		 eoq=Math.sqrt(eoq);
 		 return eoq;
 	 }
+	public void print_product_details() {
+		System.out.println("		Product Name:"+this.getProd_Name());
+		System.out.println("			Product ID:"+this.getProd_ID());
+		System.out.println("			Product Path:"+this.getProd_Path());
+		System.out.println("			Quantity:"+this.getQuantity());
+		System.out.println("			Price:"+this.getPrice());
+		System.out.println("			Fixed Price:"+this.getFixed_Price());
+		System.out.println("			Carry_Cost:"+this.getCarry_Cost());
+		System.out.println("			Demand:"+this.getDemand());
+		System.out.println("			Description:"+this.getDescription());
+	}
+	
 	//Setters and getters start here
 	/**
 	 * @return the prod_Price

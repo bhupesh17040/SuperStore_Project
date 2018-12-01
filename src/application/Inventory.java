@@ -82,7 +82,7 @@ public class Inventory {
 	
 	//Invoked when a category has to be deleted
 	public void delete_all_subcategory(Category cat) {//Deletes all Subcategories of a category
-		System.out.println("Deleting all Subcategories of "+cat+"...............");
+		System.out.println("Deleting all Subcategories of "+cat.getCategory_Name()+"...............");
 		ArrayList<String> s=new ArrayList<String>();	
 		for(int i=0;i<cat.getSubcategory_List().size();i++) {
 			s.add(cat.getSubcategory_List().get(i).getSubcategory_Name());
@@ -156,7 +156,7 @@ public class Inventory {
 	
 	//Invoked when a subcategory has to be deleted 
 		public void delete_all_product(Subcategory subcat) {//Deletes all Products of a SubCategories of a subcategory
-			System.out.println("Deleting All Products from Subcategory "+subcat+"...........");
+			System.out.println("Deleting All Products from Subcategory "+subcat.getSubcategory_Name()+"...........");
 			ArrayList<String> s=new ArrayList<String>();
 			for(int i=0;i<subcat.getProduct_List().size();i++) {
 				s.add(subcat.getProduct_List().get(i).getProd_Name());
@@ -168,7 +168,7 @@ public class Inventory {
 				
 			}
 			subcat.getProduct_List().clear();
-			System.out.println("Cleared Subcategory "+subcat+"'s Products List");
+			System.out.println("Cleared Subcategory "+subcat.getSubcategory_Name()+"'s Products List");
 		}
 	
 	
@@ -249,6 +249,21 @@ public class Inventory {
 	}
 
 
+	public void print_inventory() {
+		System.out.println("Number of Categories:"+this.CategoryList.size());
+		for(int i=0;i<this.CategoryList.size();i++) {
+			this.CategoryList.get(i).print_details();
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * @return the categoryList
 	 */

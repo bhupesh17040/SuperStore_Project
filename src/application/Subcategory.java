@@ -46,10 +46,12 @@ public class Subcategory {
 	public void print_details() {
 		System.out.println("	SubCategory Name:"+this.Subcategory_Name);
 		System.out.println("	Subcategory ID:"+this.Subcategory_ID);
-		System.out.println("	Subcategory Path"+this.Subcategory_Path);
-		System.out.println("	All Product Names inside the Subcategory");
-		for(int i=0;i<this.getProduct_List().size();i++) {
-			System.out.println("		"+this.getProduct_List().get(i).getProd_Name());
+		System.out.println("	Subcategory Path:"+this.Subcategory_Path);
+		System.out.println("	Products:");
+		System.out.println("	Number of Products:"+this.getProduct_List().size());
+		for(int j=0;j<this.getProduct_List().size();j++) {
+			System.out.print("	"+j);
+			this.getProduct_List().get(j).print_product_details();
 		}
 	}
 	

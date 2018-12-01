@@ -38,10 +38,14 @@ public class Category {
 	public void print_details() {
 		System.out.println("Category Name:"+this.Category_Name);
 		System.out.println("Category ID:"+this.Category_ID);
-		System.out.println("Category Path"+this.Category_Path);
-		System.out.println("All Product Names inside the Subcategory");
+		System.out.println("Category Path:"+this.Category_Path);
+		System.out.println("Subactegories:");
+		System.out.println("Number of Subcategories:"+
+		this.getSubcategory_List().size());
 		for(int i=0;i<this.getSubcategory_List().size();i++) {
-			System.out.println("	"+this.getSubcategory_List().get(i).getSubcategory_Name());
+			System.out.print(i);
+			this.getSubcategory_List().get(i).print_details();
+			
 		}
 	}
 	
