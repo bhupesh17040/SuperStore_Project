@@ -18,6 +18,29 @@ public class Database {
 		String password="#123@rt3ap10";
 		superuser=new SuperUser(this,id,password);
 	}
+	public void create_warehouse(String W_Name,String W_ID)
+	{
+		Warehouse w = new Warehouse(W_Name,W_ID);
+		WarehouseList.add(w);
+	}
+	public void create_store(String S_Name,String S_ID)
+	{
+		Store s=new Store(S_Name,S_ID);
+		Storelist.add(s);
+	}
+	public void create_warehouseadmin(String W_Admin_Name,String W_Admin_ID,String W_Admin_Password)
+	{
+		WarehouseAdmin wadmin=new WarehouseAdmin(W_Admin_Name,W_Admin_ID,W_Admin_Password);		
+	}
+	public void create_storeadmin(String S_Admin_Name,String S_Admin_ID,String S_Admin_Password)
+	{
+		StoreAdmin sadmin=new StoreAdmin(S_Admin_Name,S_Admin_ID,S_Admin_Password);
+	}
+	public void linkstorewarehouse(String Store_Name,String Warehouse_name)
+	{
+		
+	}
+	
 	//Setters and Getters
 	/**
 	 * @return the superuser
@@ -107,3 +130,4 @@ public class Database {
 	
 	
 }
+
